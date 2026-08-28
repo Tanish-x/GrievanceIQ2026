@@ -115,6 +115,16 @@ router.get('/', ensureBlockchain, async (req, res) => {
         message: 'Blockchain service not available'
       });
     }
+      // [NEW] Gracefully handle unregistered users (new connections)
+      const isRegistered = await blockchainService.isCitizenRegistered(userAddress);
+      if (!isRegistered) {
+        return res.json({
+          success: true,
+          message: 'No documents (citizen not registered)',
+          data: { documents: [], stats: { total: 0, verified: 0, pending: 0, rejected: 0, expired: 0 } }
+        });
+      }
+
 
     // Get user's document IDs from blockchain
     const documentIds = await blockchainService.getUserDocuments(userAddress);

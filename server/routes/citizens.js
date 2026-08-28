@@ -65,8 +65,8 @@ router.get('/profile',
     const isRegistered = await blockchainService.isCitizenRegistered(citizenAddress);
     
     if (!isRegistered) {
-      return res.status(404).json({
-        error: 'Not Found',
+      return res.status(200).json({
+        success: false,
         message: 'Citizen not registered on blockchain'
       });
     }
@@ -224,8 +224,8 @@ router.put('/update', ensureBlockchain, [
     // Check if citizen is registered
     const isRegistered = await blockchainService.isCitizenRegistered(citizenAddress);
     if (!isRegistered) {
-      return res.status(404).json({
-        error: 'Not Found',
+      return res.status(200).json({
+        success: false,
         message: 'Citizen not registered on blockchain'
       });
     }
@@ -264,8 +264,8 @@ router.put('/update', ensureBlockchain, [
     console.error('Update profile error:', error);
     
     if (error.message.includes('Citizen not registered')) {
-      return res.status(404).json({
-        error: 'Not Found',
+      return res.status(200).json({
+        success: false,
         message: 'Citizen not registered'
       });
     }
@@ -297,8 +297,8 @@ router.get('/stats', ensureBlockchain, async (req, res) => {
     // Check if citizen is registered
     const isRegistered = await blockchainService.isCitizenRegistered(citizenAddress);
     if (!isRegistered) {
-      return res.status(404).json({
-        error: 'Not Found',
+      return res.status(200).json({
+        success: false,
         message: 'Citizen not registered on blockchain'
       });
     }
@@ -368,8 +368,8 @@ router.get('/stats', ensureBlockchain, async (req, res) => {
     console.error('Get stats error:', error);
     
     if (error.message.includes('Citizen not registered')) {
-      return res.status(404).json({
-        error: 'Not Found',
+      return res.status(200).json({
+        success: false,
         message: 'Citizen not registered'
       });
     }
@@ -426,8 +426,8 @@ router.post('/verify/:address', ensureBlockchain, async (req, res) => {
     }
     
     if (error.message.includes('Citizen not registered')) {
-      return res.status(404).json({
-        error: 'Not Found',
+      return res.status(200).json({
+        success: false,
         message: 'Citizen not registered'
       });
     }
