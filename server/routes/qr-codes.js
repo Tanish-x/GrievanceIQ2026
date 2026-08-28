@@ -4,9 +4,17 @@ const QRCodeService = require('../services/qr-service');
 const { verifyToken } = require('../middleware/auth');
 const Database = require('better-sqlite3');
 const path = require('path');
+const fs = require('fs');
 
 // Initialize database connection
 const dbPath = path.join(__dirname, '../../database/bharatchain.db');
+
+// Ensure the parent directory exists before opening the DB
+const dbDir = path.dirname(dbPath);
+if (!fs.existsSync(dbDir)) {
+  fs.mkdirSync(dbDir, { recursive: true });
+}
+
 const db = new Database(dbPath);
 
 // Get QR service secret from config
