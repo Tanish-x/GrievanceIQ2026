@@ -410,9 +410,15 @@ export const DashboardProvider = ({ children }) => {
         },
       });
 
-      if (response.ok) {
-        const data = await response.json();
-        if (data.success && data.citizen) {
+      if (response.ok || response.status === 404) {
+        let data = {};
+        try {
+          data = await response.json();
+        } catch (e) {
+          // Ignore JSON parse errors for 404s
+        }
+        
+        if (response.ok && data.success && data.citizen) {
           const profileData = {
             name: data.citizen.name || '',
             email: data.citizen.email || '',
@@ -437,8 +443,10 @@ export const DashboardProvider = ({ children }) => {
             payload: { profile: profileData, original: profileData }
           });
         }
+        // If data.success is false (new user), we don't throw an error.
+        // It keeps the initial state gracefully.
       } else {
-        throw new Error('Failed to load profile');
+        throw new Error(`Failed to load profile: HTTP ${response.status}`);
       }
     } catch (error) {
       console.error('Error loading profile:', error);
