@@ -9,7 +9,7 @@ const { asyncHandler, sendResponse, sendError, healthCheck } = require('../middl
  */
 router.get('/', async (req, res) => {
   try {
-    const { sequelize } = require('../../config/database');
+    const { sequelize } = require('../config/database');
     
     // Check database connection
     let dbStatus = 'connected';
@@ -77,7 +77,7 @@ router.get('/', async (req, res) => {
 router.get('/detailed', async (req, res) => {
   try {
     const os = require('os');
-    const { sequelize } = require('../../config/database');
+    const { sequelize } = require('../config/database');
 
     // Database health check
     let dbHealth = { status: 'healthy', responseTime: null };

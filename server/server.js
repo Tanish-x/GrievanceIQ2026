@@ -53,7 +53,7 @@ const web3Routes = require('./routes/web3');
 // const blockchainRoutes = require('./routes/blockchain');
 
 // Import database and models
-const { sequelize } = require('../config/database');
+const { sequelize } = require('./config/database');
 const { User, Document, Grievance } = require('./models');
 
 const app = express();

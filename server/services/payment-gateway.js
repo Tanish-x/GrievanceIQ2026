@@ -1,6 +1,6 @@
 const Razorpay = require('razorpay');
 const crypto = require('crypto');
-const config = require('../../config/env-config');
+const config = require('../config/env-config');
 
 class PaymentGatewayService {
     constructor() {

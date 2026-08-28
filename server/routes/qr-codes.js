@@ -10,7 +10,7 @@ const dbPath = path.join(__dirname, '../../database/bharatchain.db');
 const db = new Database(dbPath);
 
 // Get QR service secret from config
-const config = require('../../config/env-config');
+const config = require('../config/env-config');
 const qrService = new QRCodeService(config.QR_CODE_SECRET);
 
 /**
