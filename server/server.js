@@ -76,16 +76,15 @@ app.use(helmet({
 
 // CORS configuration
 const corsOptions = {
-  origin: function (origin, callback) {
-    callback(null, origin || true);
-  },
+  origin: process.env.CORS_ORIGIN || 'http://localhost:3000',
   credentials: true,
-  optionsSuccessStatus: 200,
+  optionsSuccessStatus: 204,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'Accept']
+  allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With']
 };
 
 app.use(cors(corsOptions));
+app.options('*', cors(corsOptions));
 
 // Request timeout middleware
 app.use(timeoutHandler(30000)); // 30 second timeout
