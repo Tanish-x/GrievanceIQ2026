@@ -16,7 +16,7 @@ async function initializeBlockchain() {
       const privateKey = process.env.PRIVATE_KEY;
       
       await blockchainService.initialize(network, privateKey);
-      isBlockchainInitialized = true;
+      isBlockchainInitialized = blockchainService.isBlockchainAvailable();
       console.log('✅ Blockchain service initialized for citizens module');
     } catch (error) {
       console.error('❌ Failed to initialize blockchain service:', error);
