@@ -406,7 +406,7 @@ export const DashboardProvider = ({ children }) => {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${localStorage.getItem('authToken')}`,
+          'Authorization': `Bearer ${localStorage.getItem('bharatchain_token')}`,
         },
       });
 
@@ -505,7 +505,7 @@ export const DashboardProvider = ({ children }) => {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${localStorage.getItem('authToken')}`,
+          'Authorization': `Bearer ${localStorage.getItem('bharatchain_token')}`,
         },
         body: JSON.stringify(requestBody),
       });

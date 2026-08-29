@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect, Fragment } from 'react';
+import React, { useState, useEffect, Fragment } from 'react';
 import {
   Container,
   Typography,
@@ -265,7 +265,7 @@ const CitizenDashboard = () => {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${localStorage.getItem('authToken')}`,
+          'Authorization': `Bearer ${localStorage.getItem('bharatchain_token')}`,
         },
       });
 
@@ -385,7 +385,7 @@ const CitizenDashboard = () => {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${localStorage.getItem('authToken')}`,
+          'Authorization': `Bearer ${localStorage.getItem('bharatchain_token')}`,
         },
         body: JSON.stringify(requestBody),
       });
@@ -564,7 +564,7 @@ const CitizenDashboard = () => {
       const response = await fetch(`${API_BASE_URL}/api/documents/upload`, {
         method: 'POST',
         headers: {
-          'Authorization': `Bearer ${localStorage.getItem('authToken')}`,
+          'Authorization': `Bearer ${localStorage.getItem('bharatchain_token')}`,
         },
         body: formData,
       });
