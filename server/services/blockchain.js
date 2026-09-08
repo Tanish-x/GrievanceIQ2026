@@ -17,6 +17,10 @@ class BlockchainService {
         rpcUrl: 'http://127.0.0.1:8545',
         chainId: 31337
       },
+      amoy: {
+        rpcUrl: process.env.AMOY_RPC_URL || 'https://rpc-amoy.polygon.technology/',
+        chainId: 80002
+      },
       mumbai: {
         rpcUrl: process.env.MUMBAI_RPC_URL || 'https://rpc-mumbai.maticvigil.com',
         chainId: 80001
