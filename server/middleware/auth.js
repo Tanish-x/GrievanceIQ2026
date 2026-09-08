@@ -170,7 +170,7 @@ const attachUserContext = async (req, res, next) => {
       // Find user in database
       const user = await User.findOne({
         where: { walletAddress: req.user.address.toLowerCase() },
-        attributes: ['id', 'walletAddress', 'name', 'email', 'phoneNumber', 'isVerified', 'createdAt', 'updatedAt']
+        attributes: ['id', 'walletAddress', 'name', 'email', 'phone', 'isVerified', 'createdAt', 'updatedAt']
       });
 
       if (!user) {
