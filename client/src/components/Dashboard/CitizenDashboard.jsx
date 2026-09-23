@@ -1237,608 +1237,307 @@ const CitizenDashboard = () => {
   ];
 
   return (
-    <div className="bharat-container">
-      {/* Indian Heritage Header */}
-      <motion.div
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-      >
-        <Box sx={{ mb: 4, textAlign: 'center' }}>
-          <div className="bharat-chakra"></div>
-          <Typography variant="h3" className="bharat-title" gutterBottom>
-            🇮🇳 ग्रीवांस आईक्यू डैशबोर्ड 🇮🇳
-          </Typography>
-          <Typography variant="h4" className="bharat-title" gutterBottom sx={{ color: '#FF9933', mt: 1 }}>
-            GrievanceIQ Digital Identity Platform
-          </Typography>
-          <Typography variant="subtitle1" className="bharat-subtitle">
-            🪔 डिजिटल भारत की शक्ति से जुड़ें • Connected as: {formatAddress(account)} 🪔
-          </Typography>
-          <div className="bharat-decorative-border"></div>
-          <Chip 
-            label="🛡️ सत्यापित नागरिक • Verified Citizen" 
-            size="medium" 
-            icon={<Verified />}
-            className="bharat-status-verified"
-            sx={{ 
-              fontSize: '1rem', 
-              fontWeight: 600,
-              background: 'linear-gradient(135deg, #138808 0%, #50C878 100%)',
-              color: 'white',
-              '& .MuiChip-icon': { color: 'white' }
-            }} 
-          />
-        </Box>
-      </motion.div>
+    <Box sx={{ 
+      minHeight: '100vh',
+      bgcolor: '#F8FAFC', 
+      pt: { xs: 2, md: 4 },
+      pb: 8
+    }}>
+      <Container maxWidth="xl">
+        {/* Modern SaaS Header */}
+        <motion.div
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4 }}
+        >
+          <Box sx={{ 
+            display: 'flex', 
+            flexDirection: { xs: 'column', md: 'row' }, 
+            justifyContent: 'space-between',
+            alignItems: { xs: 'flex-start', md: 'center' },
+            mb: 4,
+            bgcolor: 'white',
+            p: 3,
+            borderRadius: 3,
+            border: '1px solid #E2E8F0',
+            boxShadow: '0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)'
+          }}>
+            <Box sx={{ display: 'flex', alignItems: 'center' }}>
+              <Box sx={{ 
+                width: 48, 
+                height: 48, 
+                borderRadius: 2, 
+                background: 'linear-gradient(135deg, #1E1B4B 0%, #312E81 100%)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                color: 'white',
+                mr: 2,
+                boxShadow: '0 4px 6px -1px rgba(49, 46, 129, 0.4)'
+              }}>
+                <DashboardIcon />
+              </Box>
+              <Box>
+                <Typography variant="h5" sx={{ fontWeight: 800, color: '#0F172A', letterSpacing: '-0.5px' }}>
+                  GrievanceIQ Platform
+                </Typography>
+                <Typography variant="caption" sx={{ color: '#64748B', fontWeight: 500 }}>
+                  Intelligent Civic Services • Connected as {formatAddress(account)}
+                </Typography>
+              </Box>
+            </Box>
 
-      {/* Loading Progress with Indian Theme */}
-      {isLoading && (
-        <Box sx={{ mb: 2 }}>
-          <div className="bharat-progress">
-            <div className="bharat-progress-fill" style={{ width: '100%' }}></div>
-          </div>
-        </Box>
-      )}
+            <Box sx={{ mt: { xs: 2, md: 0 }, display: 'flex', alignItems: 'center', gap: 2 }}>
+              {isLoading && <CircularProgress size={24} sx={{ color: '#3B82F6' }} />}
+              <Chip 
+                label="Verified Identity" 
+                size="small" 
+                icon={<Verified sx={{ fontSize: 16 }} />}
+                sx={{ 
+                  bgcolor: '#ECFDF5', 
+                  color: '#059669', 
+                  fontWeight: 600, 
+                  border: '1px solid #A7F3D0',
+                  '& .MuiChip-icon': { color: '#059669' }
+                }} 
+              />
+            </Box>
+          </Box>
+        </motion.div>
 
-      {/* Indian-styled Tabs */}
-      <Card className="bharat-card" sx={{ mb: 3 }}>
-        <div className="bharat-tabs">
+        {/* Modern Tabs */}
+        <Box sx={{ mb: 4, borderBottom: 1, borderColor: 'divider', bgcolor: 'white', borderRadius: 2, px: 2, border: '1px solid #E2E8F0', boxShadow: '0 1px 2px 0 rgb(0 0 0 / 0.05)' }}>
           <Tabs
             value={currentTab}
             onChange={handleTabChange}
             variant="scrollable"
             scrollButtons="auto"
             sx={{
-              '& .MuiTab-root': {
-                minHeight: 64,
-                fontWeight: 600,
-                fontSize: '1rem',
-                textTransform: 'none',
-                borderRadius: '25px',
-                margin: '0 8px',
-                color: '#7B3F00',
-                '&:hover': {
-                  backgroundColor: 'rgba(255, 153, 51, 0.1)',
-                  color: '#FF9933'
-                }
-              },
-              '& .Mui-selected': {
-                background: 'linear-gradient(135deg, #FF6B35 0%, #F7931E 50%, #FFD700 100%)',
-                color: 'white !important',
-                boxShadow: '0 4px 16px rgba(255, 153, 51, 0.3)',
-                fontWeight: 700
-              },
               '& .MuiTabs-indicator': {
-                display: 'none'
+                backgroundColor: '#3B82F6',
+                height: 3,
+                borderTopLeftRadius: 3,
+                borderTopRightRadius: 3,
+              },
+              '& .MuiTab-root': {
+                textTransform: 'none',
+                minWidth: 120,
+                fontWeight: 600,
+                fontSize: '0.9rem',
+                color: '#64748B',
+                py: 2.5,
+                '&:hover': {
+                  color: '#1E293B',
+                  backgroundColor: 'rgba(241, 245, 249, 0.5)'
+                },
+                '&.Mui-selected': {
+                  color: '#1E293B',
+                }
               }
             }}
           >
             {tabs.map((tab, index) => (
               <Tab
                 key={index}
-                label={`${getTabEmoji(index)} ${tab.label}`}
+                icon={tab.icon}
                 iconPosition="start"
+                label={tab.label.split(' • ')[1] || tab.label}
               />
             ))}
           </Tabs>
-        </div>
-      </Card>
+        </Box>
 
-      {/* Tab Panels */}
-      <AnimatePresence mode="wait">
+        {/* Tab Panels */}
+        <AnimatePresence mode="wait">
         {/* Dashboard Tab */}
         <TabPanel key="dashboard" value={currentTab} index={0}>
-          <div className="bharat-rangoli"></div>
-          <Grid container spacing={4}>
-            {/* Sanskrit Welcome Message */}
-            <Grid item xs={12}>
-              <Typography className="bharat-sanskrit">
+          <Box sx={{ maxWidth: '1200px', mx: 'auto', p: { xs: 1, md: 2 } }}>
+            {/* Header Section */}
+            <Box sx={{ mb: 4, textAlign: 'left' }}>
+              <Typography variant="h4" sx={{ fontWeight: 800, color: '#0F172A', mb: 1 }}>
+                डैशबोर्ड • Dashboard
+              </Typography>
+              <Typography variant="subtitle1" sx={{ color: '#64748B', fontWeight: 500 }}>
                 सर्वे भवन्तु सुखिनः सर्वे सन्तु निरामयाः • May All Be Happy and Healthy
               </Typography>
+            </Box>
+
+            {/* Statistics Grid - Compact SaaS Style */}
+            <Grid container spacing={2.5} sx={{ mb: 5 }}>
+              {[
+                { title: 'कुल दस्तावेज़', subtitle: 'Total Documents', value: stats.totalDocuments, icon: <DocumentIcon />, color: '#3B82F6' },
+                { title: 'सत्यापित दस्तावेज़', subtitle: 'Verified Documents', value: stats.verifiedDocuments, icon: <Verified />, color: '#10B981' },
+                { title: 'लंबित शिकायतें', subtitle: 'Pending Grievances', value: stats.pendingGrievances, icon: <PendingIcon />, color: '#F59E0B' },
+                { title: 'हल की गई समस्याएं', subtitle: 'Resolved Issues', value: stats.resolvedGrievances, icon: <CheckCircle />, color: '#6366F1' },
+                { title: 'सरकारी सेवाएं', subtitle: 'Government Services', value: stats.governmentServices || 12, icon: <AccountBalance />, color: '#EC4899' },
+                { title: 'मोबाइल सुविधाएं', subtitle: 'Mobile Features', value: stats.mobileFeatures || 4, icon: <SmartToyIcon />, color: '#8B5CF6' },
+                { title: 'भुगतान इतिहास', subtitle: 'Payment History', value: stats.completedPayments || 0, icon: <AccountBalance />, color: '#14B8A6' },
+                { title: 'आपातकालीन सेवाएं', subtitle: 'Emergency Services', value: stats.emergencyContacts || 3, icon: <Security />, color: '#EF4444' }
+              ].map((stat, i) => (
+                <Grid item xs={12} sm={6} md={3} key={i}>
+                  <Card sx={{ 
+                    p: 2.5, 
+                    borderRadius: 3, 
+                    boxShadow: '0 1px 3px 0 rgb(0 0 0 / 0.1)',
+                    border: '1px solid #F1F5F9',
+                    transition: 'all 0.2s ease',
+                    '&:hover': { transform: 'translateY(-2px)', boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)', borderColor: '#E2E8F0' }
+                  }}>
+                    <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', mb: 1.5 }}>
+                      <Box sx={{ p: 1.2, borderRadius: 2, bgcolor: `${stat.color}15`, color: stat.color, display: 'flex' }}>
+                        {stat.icon}
+                      </Box>
+                      <Typography variant="h5" sx={{ fontWeight: 800, color: '#1E293B' }}>{stat.value}</Typography>
+                    </Box>
+                    <Typography variant="body2" sx={{ fontWeight: 600, color: '#475569' }}>{stat.title}</Typography>
+                    <Typography variant="caption" sx={{ color: '#94A3B8' }}>{stat.subtitle}</Typography>
+                  </Card>
+                </Grid>
+              ))}
             </Grid>
 
-            {/* Statistics Cards with Indian Theme */}
-            <Grid item xs={12}>
-              <Typography variant="h4" gutterBottom sx={{ 
-                fontWeight: 700, 
-                mb: 4, 
-                color: '#000080',
-                textAlign: 'center',
-                fontSize: '2.5rem',
-                fontFamily: '"Playfair Display", serif'
-              }}>
-                📊 आंकड़ों की झलक • Dashboard Statistics
+            {/* AI Capabilities Section */}
+            <Box sx={{ mb: 5, p: 4, borderRadius: 4, background: 'linear-gradient(145deg, #1E1B4B 0%, #312E81 100%)', color: 'white', position: 'relative', overflow: 'hidden', boxShadow: '0 10px 15px -3px rgb(0 0 0 / 0.1)' }}>
+              <Box sx={{ position: 'absolute', top: -40, right: -20, opacity: 0.05, transform: 'scale(1.5)' }}>
+                <BrainIcon sx={{ fontSize: 250 }} />
+              </Box>
+              <Typography variant="h5" sx={{ fontWeight: 700, mb: 1, position: 'relative', zIndex: 1, display: 'flex', alignItems: 'center' }}>
+                <MagicIcon sx={{ mr: 1.5 }} /> AI विश्लेषण • Intelligence Hub
               </Typography>
-            </Grid>
-
-            {[
-              {
-                title: 'कुल दस्तावेज़',
-                subtitle: 'Total Documents',
-                value: stats.totalDocuments,
-                icon: '📜',
-                gradient: 'linear-gradient(135deg, #FF6B35 0%, #F7931E 50%, #FFD700 100%)',
-                trend: '+12%',
-                description: 'सभी अपलोड किए गए दस्तावेज़'
-              },
-              {
-                title: 'सत्यापित दस्तावेज़',
-                subtitle: 'Verified Documents', 
-                value: stats.verifiedDocuments,
-                icon: '✅',
-                gradient: 'linear-gradient(135deg, #138808 0%, #50C878 100%)',
-                trend: '+8%',
-                description: 'प्रमाणित और स्वीकृत'
-              },
-              {
-                title: 'लंबित शिकायतें',
-                subtitle: 'Pending Grievances',
-                value: stats.pendingGrievances,
-                icon: '⏳',
-                gradient: 'linear-gradient(135deg, #E49B0F 0%, #FFA500 100%)', 
-                trend: '-5%',
-                description: 'समाधान की प्रतीक्षा में'
-              },
-              {
-                title: 'हल की गई समस्याएं',
-                subtitle: 'Resolved Issues',
-                value: stats.resolvedGrievances,
-                icon: '🎯',
-                gradient: 'linear-gradient(135deg, #005A5B 0%, #4169E1 100%)',
-                trend: '+25%',
-                description: 'सफलतापूर्वक हल किया गया'
-              },
-              {
-                title: 'सरकारी सेवाएं',
-                subtitle: 'Government Services',
-                value: stats.governmentServices || 12,
-                icon: '🏛️',
-                gradient: 'linear-gradient(135deg, #8B0000 0%, #DC143C 100%)',
-                trend: 'NEW',
-                description: 'उपलब्ध सरकारी सुविधाएं'
-              },
-              {
-                title: 'मोबाइल सुविधाएं',
-                subtitle: 'Mobile Features',
-                value: stats.mobileFeatures || 4,
-                icon: '📱',
-                gradient: 'linear-gradient(135deg, #4B0082 0%, #8A2BE2 100%)',
-                trend: 'NEW',
-                description: 'QR कोड और ऑफलाइन सिंक'
-              },
-              {
-                title: 'भुगतान इतिहास',
-                subtitle: 'Payment History',
-                value: stats.completedPayments || 0,
-                icon: '💳',
-                gradient: 'linear-gradient(135deg, #006400 0%, #32CD32 100%)',
-                trend: '+0%',
-                description: 'सफल भुगतान लेनदेन'
-              },
-              {
-                title: 'आपातकालीन सेवाएं',
-                subtitle: 'Emergency Services',
-                value: stats.emergencyContacts || 3,
-                icon: '🚨',
-                gradient: 'linear-gradient(135deg, #B22222 0%, #FF6347 100%)',
-                trend: 'ACTIVE',
-                description: 'आपातकालीन संपर्क तैयार'
-              }
-            ].map((stat, index) => (
-              <Grid item xs={12} sm={6} md={3} key={index}>
-                <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.15 }}
-                  whileHover={{ scale: 1.05, rotateY: 5 }}
-                  style={{ height: '100%' }}
-                >
-                  <Card 
-                    className="bharat-card bharat-glow"
-                    sx={{ 
-                      p: 3, 
-                      height: '100%',
-                      background: stat.gradient,
+              <Typography variant="body2" sx={{ mb: 4, color: '#C7D2FE', position: 'relative', zIndex: 1, opacity: 0.9 }}>
+                उन्नत दस्तावेज़ प्रसंस्करण और स्मार्ट शिकायत समाधान • Advanced Document Processing & Smart Grievance Resolution
+              </Typography>
+              <Grid container spacing={3} sx={{ position: 'relative', zIndex: 1 }}>
+                {[
+                  { title: 'AI दस्तावेज़ विश्लेषण', subtitle: 'AI Document Analysis', icon: <AnalyticsIcon />, action: () => setCurrentTab(4) },
+                  { title: 'स्मार्ट शिकायत दर्ज करें', subtitle: 'Smart Grievance Submission', icon: <GrievanceIcon />, action: () => setCurrentTab(3) }
+                ].map((action, i) => (
+                  <Grid item xs={12} sm={6} key={i}>
+                    <Card sx={{ 
+                      p: 2.5, 
+                      bgcolor: 'rgba(255,255,255,0.06)', 
+                      backdropFilter: 'blur(10px)',
+                      border: '1px solid rgba(255,255,255,0.1)',
                       color: 'white',
-                      position: 'relative',
-                      overflow: 'hidden',
-                      minHeight: '220px',
-                      display: 'flex',
-                      flexDirection: 'column',
-                      justifyContent: 'space-between'
-                    }}
-                  >
-                    <Box sx={{ position: 'absolute', top: -20, right: -20, fontSize: '6rem', opacity: 0.1 }}>
-                      {stat.icon}
-                    </Box>
-                    <CardContent sx={{ position: 'relative', zIndex: 2 }}>
-                      <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
-                        <Typography sx={{ fontSize: '3rem', mr: 2 }}>
-                          {stat.icon}
-                        </Typography>
-                        <Chip 
-                          label={stat.trend} 
-                          size="small" 
-                          sx={{ 
-                            ml: 'auto',
-                            backgroundColor: 'rgba(255,255,255,0.2)',
-                            color: 'white',
-                            fontWeight: 700,
-                            border: '1px solid rgba(255,255,255,0.3)'
-                          }} 
-                        />
-                      </Box>
-                      <Typography variant="h2" sx={{ fontWeight: 900, mb: 1, textShadow: '2px 2px 4px rgba(0,0,0,0.3)' }}>
-                        {stat.value}
-                      </Typography>
-                      <Typography variant="h6" sx={{ fontWeight: 600, opacity: 0.95, fontFamily: '"Playfair Display", serif' }}>
-                        {stat.title}
-                      </Typography>
-                      <Typography variant="body2" sx={{ opacity: 0.8, fontWeight: 500 }}>
-                        {stat.subtitle}
-                      </Typography>
-                      <Typography variant="caption" sx={{ opacity: 0.7, mt: 1, display: 'block', fontStyle: 'italic' }}>
-                        {stat.description}
-                      </Typography>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              </Grid>
-            ))}
-
-            {/* Quick Actions with Traditional Indian Style */}
-            <Grid item xs={12}>
-              <Typography variant="h4" gutterBottom sx={{ 
-                fontWeight: 700, 
-                mb: 4, 
-                mt: 4,
-                color: '#000080',
-                textAlign: 'center',
-                fontSize: '2.5rem',
-                fontFamily: '"Playfair Display", serif'
-              }}>
-                🚀 त्वरित कार्य • Quick Actions
-              </Typography>
-            </Grid>
-
-            {[
-              {
-                title: 'दस्तावेज़ अपलोड',
-                subtitle: 'Upload Document',
-                description: 'नए दस्तावेज़ सत्यापन के लिए जोड़ें',
-                englishDesc: 'Add new documents for verification',
-                icon: '📤',
-                action: () => setCurrentTab(2),
-                gradient: 'linear-gradient(135deg, #FF6B35 0%, #F7931E 100%)',
-                bgPattern: '🏛️'
-              },
-              {
-                title: 'शिकायत दर्ज करें',
-                subtitle: 'Submit Grievance', 
-                description: 'समस्याओं या शिकायतों की रिपोर्ट करें',
-                englishDesc: 'Report issues or complaints',
-                icon: '📝',
-                action: () => setCurrentTab(3),
-                gradient: 'linear-gradient(135deg, #138808 0%, #50C878 100%)',
-                bgPattern: '⚖️'
-              },
-              {
-                title: 'AI दस्तावेज़ विश्लेषण',
-                subtitle: 'AI Document Analysis',
-                description: 'उन्नत दस्तावेज़ प्रसंस्करण',
-                englishDesc: 'Advanced document processing',
-                icon: '🤖',
-                action: () => setCurrentTab(4),
-                gradient: 'linear-gradient(135deg, #005A5B 0%, #4169E1 100%)',
-                bgPattern: '🔬'
-              },
-              {
-                title: 'प्रोफ़ाइल अपडेट',
-                subtitle: 'Update Profile',
-                description: 'अपनी जानकारी प्रबंधित करें',
-                englishDesc: 'Manage your information', 
-                icon: '👤',
-                action: () => setCurrentTab(1),
-                gradient: 'linear-gradient(135deg, #E49B0F 0%, #FFA500 100%)',
-                bgPattern: '🎭'
-              },
-              {
-                title: 'सरकारी सेवाएं',
-                subtitle: 'Government Services',
-                description: 'आधार, पैन, पासपोर्ट सत्यापन',
-                englishDesc: 'Aadhaar, PAN, Passport verification',
-                icon: '🏛️',
-                action: () => setCurrentTab(5),
-                gradient: 'linear-gradient(135deg, #8B0000 0%, #DC143C 100%)',
-                bgPattern: '🇮🇳'
-              },
-              {
-                title: 'QR और मोबाइल',
-                subtitle: 'QR & Mobile',
-                description: 'QR कोड, OTP, ऑफलाइन सिंक',
-                englishDesc: 'QR codes, OTP, offline sync',
-                icon: '📱',
-                action: () => setCurrentTab(6),
-                gradient: 'linear-gradient(135deg, #4B0082 0%, #8A2BE2 100%)',
-                bgPattern: '📲'
-              },
-              {
-                title: 'भुगतान सेवाएं',
-                subtitle: 'Payment Services',
-                description: 'सरकारी शुल्क, UPI, बैंकिंग',
-                englishDesc: 'Government fees, UPI, banking',
-                icon: '💳',
-                action: () => setCurrentTab(7),
-                gradient: 'linear-gradient(135deg, #006400 0%, #32CD32 100%)',
-                bgPattern: '💰'
-              },
-              {
-                title: 'आपातकालीन सेवाएं',
-                subtitle: 'Emergency Services',
-                description: 'SOS अलर्ट, आपदा प्रबंधन',
-                englishDesc: 'SOS alerts, disaster management',
-                icon: '🚨',
-                action: () => setCurrentTab(8),
-                gradient: 'linear-gradient(135deg, #B22222 0%, #FF6347 100%)',
-                bgPattern: '🚑'
-              }
-            ].map((action, index) => (
-              <Grid item xs={12} sm={6} md={4} lg={3} key={index}>
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  whileHover={{ scale: 1.08, rotateY: 8 }}
-                  whileTap={{ scale: 0.95 }}
-                  style={{ height: '100%' }}
-                >
-                  <Card 
-                    className="bharat-action-card bharat-glow"
-                    sx={{ 
-                      height: '100%', 
                       cursor: 'pointer',
-                      background: 'rgba(255, 255, 255, 0.95)',
-                      border: '2px solid transparent',
-                      position: 'relative',
-                      overflow: 'hidden',
-                      minHeight: '280px',
-                      backdropFilter: 'blur(20px)',
-                      '&:hover': {
-                        borderColor: '#FF9933',
-                        boxShadow: '0 20px 60px rgba(255, 153, 51, 0.3)',
-                        '& .action-button': {
-                          background: action.gradient,
-                          transform: 'translateY(-2px)'
-                        }
-                      }
-                    }}
-                    onClick={action.action}
-                  >
-                    <Box sx={{ position: 'absolute', top: -10, right: -10, fontSize: '5rem', opacity: 0.08, color: '#FF9933' }}>
-                      {action.bgPattern}
-                    </Box>
-                    <CardContent sx={{ textAlign: 'center', p: 4, position: 'relative', zIndex: 2 }}>
-                      <Box sx={{ 
-                        fontSize: '4rem', 
-                        mb: 3,
-                        filter: 'drop-shadow(0 4px 8px rgba(0,0,0,0.1))'
-                      }}>
-                        {action.icon}
+                      transition: 'all 0.2s',
+                      boxShadow: 'none',
+                      '&:hover': { bgcolor: 'rgba(255,255,255,0.1)', transform: 'translateY(-2px)', borderColor: 'rgba(255,255,255,0.2)' }
+                    }} onClick={action.action}>
+                      <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                        <Box sx={{ p: 1.5, mr: 2, borderRadius: 2, bgcolor: 'rgba(255,255,255,0.1)' }}>
+                          {action.icon}
+                        </Box>
+                        <Box>
+                          <Typography variant="subtitle1" sx={{ fontWeight: 600 }}>{action.title}</Typography>
+                          <Typography variant="caption" sx={{ color: '#E0E7FF' }}>{action.subtitle}</Typography>
+                        </Box>
                       </Box>
-                      <Typography variant="h5" gutterBottom sx={{ 
-                        fontWeight: 700,
-                        color: '#000080',
-                        fontFamily: '"Playfair Display", serif',
-                        mb: 1
-                      }}>
-                        {action.title}
-                      </Typography>
-                      <Typography variant="h6" gutterBottom sx={{ 
-                        fontWeight: 600,
-                        color: '#7B3F00',
-                        mb: 2
-                      }}>
-                        {action.subtitle}
-                      </Typography>
-                      <Typography variant="body2" color="text.secondary" sx={{ 
-                        mb: 1,
-                        fontWeight: 500,
-                        color: '#7B3F00'
-                      }}>
-                        {action.description}
-                      </Typography>
-                      <Typography variant="body2" color="text.secondary" sx={{ 
-                        mb: 3,
-                        fontStyle: 'italic',
-                        opacity: 0.8
-                      }}>
-                        {action.englishDesc}
-                      </Typography>
-                      <Button
-                        className="action-button"
-                        variant="contained"
-                        size="large"
-                        sx={{ 
-                          mt: 2,
-                          borderRadius: '25px',
-                          px: 4,
-                          py: 1.5,
-                          fontWeight: 700,
-                          textTransform: 'none',
-                          background: 'linear-gradient(135deg, #FF9933 0%, #FFD700 100%)',
-                          color: 'white',
-                          transition: 'all 0.3s ease',
-                          boxShadow: '0 4px 16px rgba(255, 153, 51, 0.3)'
-                        }}
-                        startIcon={<span style={{ fontSize: '1.2rem' }}>🚀</span>}
-                      >
-                        शुरू करें • Start
-                      </Button>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              </Grid>
-            ))}
-
-            {/* System Status with Traditional Indian Styling */}
-            <Grid item xs={12}>
-              <Card className="bharat-card" sx={{ mt: 4 }}>
-                <CardContent sx={{ p: 4 }}>
-                  <Box sx={{ display: 'flex', alignItems: 'center', mb: 4 }}>
-                    <Typography variant="h4" sx={{ 
-                      fontWeight: 700, 
-                      flexGrow: 1, 
-                      color: '#000080',
-                      fontFamily: '"Playfair Display", serif'
-                    }}>
-                      🔧 सिस्टम स्थिति • System Status
-                    </Typography>
-                    <Tooltip title="स्थिति रीफ्रेश करें • Refresh Status">
-                      <IconButton 
-                        size="large" 
-                        sx={{ 
-                          color: '#FF9933',
-                          background: 'linear-gradient(135deg, rgba(255, 153, 51, 0.1) 0%, rgba(255, 215, 0, 0.1) 100%)',
-                          '&:hover': {
-                            background: 'linear-gradient(135deg, #FF9933 0%, #FFD700 100%)',
-                            color: 'white'
-                          }
-                        }}
-                      >
-                        <Refresh />
-                      </IconButton>
-                    </Tooltip>
-                  </Box>
-                  
-                  <Grid container spacing={3}>
-                    {[
-                      { 
-                        name: 'ब्लॉकचेन नेटवर्क', 
-                        englishName: 'Blockchain Network', 
-                        status: 'Connected',
-                        statusHindi: 'जुड़ा हुआ',
-                        icon: '🔗',
-                        gradient: 'linear-gradient(135deg, #138808 0%, #50C878 100%)'
-                      },
-                      { 
-                        name: 'IPFS भंडारण', 
-                        englishName: 'IPFS Storage', 
-                        status: 'Online',
-                        statusHindi: 'ऑनलाइन',
-                        icon: '☁️',
-                        gradient: 'linear-gradient(135deg, #005A5B 0%, #4169E1 100%)'
-                      },
-                      { 
-                        name: 'AI प्रसंस्करण', 
-                        englishName: 'AI Processing', 
-                        status: 'Available',
-                        statusHindi: 'उपलब्ध',
-                        icon: '🤖',
-                        gradient: 'linear-gradient(135deg, #E49B0F 0%, #FFA500 100%)'
-                      },
-                      { 
-                        name: 'दस्तावेज़ सत्यापन', 
-                        englishName: 'Document Verification', 
-                        status: 'Active',
-                        statusHindi: 'सक्रिय',
-                        icon: '✅',
-                        gradient: 'linear-gradient(135deg, #FF6B35 0%, #F7931E 100%)'
-                      },
-                      { 
-                        name: 'सरकारी APIs', 
-                        englishName: 'Government APIs', 
-                        status: 'Connected',
-                        statusHindi: 'जुड़ा हुआ',
-                        icon: '🏛️',
-                        gradient: 'linear-gradient(135deg, #8B0000 0%, #DC143C 100%)'
-                      },
-                      { 
-                        name: 'मोबाइल सेवाएं', 
-                        englishName: 'Mobile Services', 
-                        status: 'Active',
-                        statusHindi: 'सक्रिय',
-                        icon: '📱',
-                        gradient: 'linear-gradient(135deg, #4B0082 0%, #8A2BE2 100%)'
-                      },
-                      { 
-                        name: 'भुगतान गेटवे', 
-                        englishName: 'Payment Gateway', 
-                        status: 'Secure',
-                        statusHindi: 'सुरक्षित',
-                        icon: '💳',
-                        gradient: 'linear-gradient(135deg, #006400 0%, #32CD32 100%)'
-                      },
-                      { 
-                        name: 'आपातकालीन सिस्टम', 
-                        englishName: 'Emergency System', 
-                        status: 'Ready',
-                        statusHindi: 'तैयार',
-                        icon: '🚨',
-                        gradient: 'linear-gradient(135deg, #B22222 0%, #FF6347 100%)'
-                      }
-                    ].map((service, index) => (
-                      <Grid item xs={12} sm={6} md={4} lg={3} key={index}>
-                        <motion.div
-                          initial={{ opacity: 0, x: -20 }}
-                          animate={{ opacity: 1, x: 0 }}
-                          transition={{ duration: 0.5, delay: index * 0.1 }}
-                        >
-                          <Box sx={{ 
-                            display: 'flex', 
-                            flexDirection: 'column',
-                            alignItems: 'center',
-                            p: 3, 
-                            background: service.gradient,
-                            borderRadius: 4,
-                            color: 'white',
-                            textAlign: 'center',
-                            position: 'relative',
-                            overflow: 'hidden',
-                            minHeight: '150px',
-                            boxShadow: '0 8px 32px rgba(0, 0, 0, 0.15)'
-                          }}>
-                            <Box sx={{ position: 'absolute', top: -10, right: -10, fontSize: '4rem', opacity: 0.1 }}>
-                              {service.icon}
-                            </Box>
-                            <Typography sx={{ fontSize: '3rem', mb: 2, filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.3))' }}>
-                              {service.icon}
-                            </Typography>
-                            <Typography variant="h6" sx={{ fontWeight: 700, mb: 1, fontFamily: '"Playfair Display", serif' }}>
-                              {service.name}
-                            </Typography>
-                            <Typography variant="body2" sx={{ mb: 1, opacity: 0.9, fontWeight: 500 }}>
-                              {service.englishName}
-                            </Typography>
-                            <Chip
-                              label={`${service.statusHindi} • ${service.status}`}
-                              size="small"
-                              sx={{
-                                backgroundColor: 'rgba(255, 255, 255, 0.2)',
-                                color: 'white',
-                                fontWeight: 600,
-                                border: '1px solid rgba(255, 255, 255, 0.3)'
-                              }}
-                            />
-                          </Box>
-                        </motion.div>
-                      </Grid>
-                    ))}
+                    </Card>
                   </Grid>
-                  
-                  {/* Footer with Inspirational Message */}
-                  <Box sx={{ mt: 4, textAlign: 'center' }}>
-                    <Typography className="bharat-sanskrit" sx={{ fontSize: '1rem', color: '#7B3F00' }}>
-                      वसुधैव कुटुम्बकम् • The World is One Family
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary" sx={{ mt: 1, fontStyle: 'italic' }}>
-                      "Powered by GrievanceIQ - Connecting India's Digital Future with Blockchain Technology"
-                    </Typography>
-                  </Box>
-                </CardContent>
-              </Card>
+                ))}
+              </Grid>
+            </Box>
+
+            {/* Quick Actions Grid */}
+            <Typography variant="h6" sx={{ fontWeight: 700, color: '#1E293B', mb: 3 }}>
+              त्वरित कार्य • Quick Actions
+            </Typography>
+            <Grid container spacing={2.5} sx={{ mb: 5 }}>
+              {[
+                { title: 'दस्तावेज़ अपलोड', subtitle: 'Upload Document', icon: '📤', action: () => setCurrentTab(2) },
+                { title: 'प्रोफ़ाइल अपडेट', subtitle: 'Update Profile', icon: '👤', action: () => setCurrentTab(1) },
+                { title: 'सरकारी सेवाएं', subtitle: 'Government Services', icon: '🏛️', action: () => setCurrentTab(5) },
+                { title: 'QR और मोबाइल', subtitle: 'QR & Mobile', icon: '📱', action: () => setCurrentTab(6) },
+                { title: 'भुगतान सेवाएं', subtitle: 'Payment Services', icon: '💳', action: () => setCurrentTab(7) },
+                { title: 'आपातकालीन सेवाएं', subtitle: 'Emergency Services', icon: '🚨', action: () => setCurrentTab(8) }
+              ].map((action, i) => (
+                <Grid item xs={12} sm={6} md={4} key={i}>
+                  <Card sx={{ 
+                    p: 2.5, 
+                    display: 'flex', 
+                    alignItems: 'center', 
+                    cursor: 'pointer',
+                    borderRadius: 3,
+                    border: '1px solid #F1F5F9',
+                    boxShadow: '0 1px 2px 0 rgb(0 0 0 / 0.05)',
+                    transition: 'all 0.2s ease',
+                    '&:hover': {
+                      borderColor: '#CBD5E1',
+                      boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)',
+                      transform: 'translateY(-2px)'
+                    }
+                  }} onClick={action.action}>
+                    <Box sx={{ fontSize: '1.8rem', mr: 2, bgcolor: '#F8FAFC', width: 52, height: 52, display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: 2 }}>
+                      {action.icon}
+                    </Box>
+                    <Box>
+                      <Typography variant="subtitle2" sx={{ fontWeight: 700, color: '#334155' }}>{action.title}</Typography>
+                      <Typography variant="caption" sx={{ color: '#64748B' }}>{action.subtitle}</Typography>
+                    </Box>
+                  </Card>
+                </Grid>
+              ))}
             </Grid>
-          </Grid>
+
+            {/* System Status Section */}
+            <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', mb: 3 }}>
+              <Typography variant="h6" sx={{ fontWeight: 700, color: '#1E293B' }}>
+                सिस्टम स्थिति • System Status
+              </Typography>
+              <Tooltip title="स्थिति रीफ्रेश करें • Refresh Status">
+                <IconButton size="small" sx={{ color: '#64748B', bgcolor: '#F1F5F9', '&:hover': { bgcolor: '#E2E8F0' } }}>
+                  <Refresh fontSize="small" />
+                </IconButton>
+              </Tooltip>
+            </Box>
+            
+            <Card sx={{ borderRadius: 3, border: '1px solid #E2E8F0', boxShadow: '0 1px 2px 0 rgb(0 0 0 / 0.05)', overflow: 'hidden' }}>
+              <Grid container>
+                {[
+                  { name: 'ब्लॉकचेन नेटवर्क', englishName: 'Blockchain Network', status: 'Connected', statusHindi: 'जुड़ा हुआ', color: '#10B981' },
+                  { name: 'IPFS भंडारण', englishName: 'IPFS Storage', status: 'Online', statusHindi: 'ऑनलाइन', color: '#10B981' },
+                  { name: 'AI प्रसंस्करण', englishName: 'AI Processing', status: 'Available', statusHindi: 'उपलब्ध', color: '#10B981' },
+                  { name: 'दस्तावेज़ सत्यापन', englishName: 'Document Verification', status: 'Active', statusHindi: 'सक्रिय', color: '#10B981' },
+                  { name: 'सरकारी APIs', englishName: 'Government APIs', status: 'Connected', statusHindi: 'जुड़ा हुआ', color: '#10B981' },
+                  { name: 'मोबाइल सेवाएं', englishName: 'Mobile Services', status: 'Active', statusHindi: 'सक्रिय', color: '#10B981' },
+                  { name: 'भुगतान गेटवे', englishName: 'Payment Gateway', status: 'Secure', statusHindi: 'सुरक्षित', color: '#10B981' },
+                  { name: 'आपातकालीन सिस्टम', englishName: 'Emergency System', status: 'Ready', statusHindi: 'तैयार', color: '#10B981' }
+                ].map((service, index) => (
+                  <Grid item xs={12} sm={6} md={3} key={index} sx={{ 
+                    p: 2.5, 
+                    borderBottom: '1px solid #F1F5F9',
+                    borderRight: { md: (index + 1) % 4 !== 0 ? '1px solid #F1F5F9' : 'none', sm: (index + 1) % 2 !== 0 ? '1px solid #F1F5F9' : 'none' },
+                  }}>
+                    <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
+                      <Box sx={{ width: 8, height: 8, borderRadius: '50%', bgcolor: service.color, mr: 1.5, boxShadow: `0 0 8px ${service.color}60` }} />
+                      <Typography variant="body2" sx={{ fontWeight: 600, color: '#334155' }}>
+                        {service.name}
+                      </Typography>
+                    </Box>
+                    <Box sx={{ pl: 2.5 }}>
+                      <Typography variant="caption" sx={{ color: '#64748B', display: 'block', mb: 0.5 }}>
+                        {service.englishName}
+                      </Typography>
+                      <Typography variant="caption" sx={{ color: service.color, fontWeight: 600, bgcolor: `${service.color}15`, px: 1, py: 0.25, borderRadius: 1 }}>
+                        {service.statusHindi} • {service.status}
+                      </Typography>
+                    </Box>
+                  </Grid>
+                ))}
+              </Grid>
+            </Card>
+
+            {/* Footer */}
+            <Box sx={{ mt: 6, textAlign: 'center', pt: 4, borderTop: '1px solid #F1F5F9' }}>
+              <Typography sx={{ fontSize: '0.875rem', fontWeight: 600, color: '#475569', mb: 0.5 }}>
+                वसुधैव कुटुम्बकम् • The World is One Family
+              </Typography>
+              <Typography variant="caption" sx={{ color: '#94A3B8' }}>
+                Powered by GrievanceIQ - Connecting India's Digital Future with Blockchain Technology
+              </Typography>
+            </Box>
+          </Box>
         </TabPanel>
 
         {/* Profile Tab with Indian Heritage Theme */}
@@ -5066,7 +4765,8 @@ const CitizenDashboard = () => {
           </Grid>
         </TabPanel>
       </AnimatePresence>
-    </div>
+      </Container>
+    </Box>
   );
 };
 

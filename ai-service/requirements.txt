@@ -8,6 +8,7 @@ numpy==1.24.3
 pandas==2.0.3
 langdetect==1.0.9
 PyMuPDF==1.23.3
+gunicorn==21.2.0
 
 # Simpler OCR dependencies that work better on Windows
 # easyocr==1.7.0  # Commented out due to dependency conflicts

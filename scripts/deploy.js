@@ -11,21 +11,19 @@ async function main() {
   const balance = await ethers.provider.getBalance(deployer.address);
   console.log("💰 Account balance:", ethers.formatEther(balance), "ETH");
 
-  // Deploy CitizenRegistry
-  console.log("\n📄 Deploying CitizenRegistry...");
+  // Attach to existing CitizenRegistry
+  console.log("\n📄 Attaching to existing CitizenRegistry...");
+  const citizenRegistryAddress = "0x13fcbCeA5e59c00143918507d372AC7C612cfdA1";
   const CitizenRegistry = await ethers.getContractFactory("CitizenRegistry");
-  const citizenRegistry = await CitizenRegistry.deploy();
-  await citizenRegistry.waitForDeployment();
-  const citizenRegistryAddress = await citizenRegistry.getAddress();
-  console.log("✅ CitizenRegistry deployed to:", citizenRegistryAddress);
+  const citizenRegistry = CitizenRegistry.attach(citizenRegistryAddress);
+  console.log("✅ CitizenRegistry connected at:", citizenRegistryAddress);
 
-  // Deploy DocumentRegistry
-  console.log("\n📄 Deploying DocumentRegistry...");
+  // Attach to existing DocumentRegistry
+  console.log("\n📄 Attaching to existing DocumentRegistry...");
+  const documentRegistryAddress = "0x6C08b51F1167A97627A6fB3405b5b24f57fe6144";
   const DocumentRegistry = await ethers.getContractFactory("DocumentRegistry");
-  const documentRegistry = await DocumentRegistry.deploy();
-  await documentRegistry.waitForDeployment();
-  const documentRegistryAddress = await documentRegistry.getAddress();
-  console.log("✅ DocumentRegistry deployed to:", documentRegistryAddress);
+  const documentRegistry = DocumentRegistry.attach(documentRegistryAddress);
+  console.log("✅ DocumentRegistry connected at:", documentRegistryAddress);
 
   // Deploy GrievanceSystem
   console.log("\n📄 Deploying GrievanceSystem...");

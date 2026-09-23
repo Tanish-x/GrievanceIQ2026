@@ -16,6 +16,11 @@ module.exports = {
     localhost: {
       url: "http://localhost:8545"
     },
+    amoy: {
+      url: process.env.AMOY_RPC_URL || "https://polygon-amoy-bor-rpc.publicnode.com",
+      accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
+      chainId: 80002
+    },
     mumbai: {
       url: process.env.MUMBAI_RPC_URL || "https://rpc-mumbai.maticvigil.com",
       accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
@@ -31,9 +36,9 @@ module.exports = {
     apiKey: process.env.POLYGONSCAN_API_KEY
   },
   paths: {
-    sources: "./blockchain/contracts",
-    tests: "./tests/contracts",
-    cache: "./blockchain/cache",
-    artifacts: "./blockchain/artifacts"
+    sources: "./contracts",
+    tests: "../tests/contracts",
+    cache: "./cache",
+    artifacts: "./artifacts"
   }
 };

@@ -92,7 +92,7 @@ class BlockchainService {
    */
   async loadContracts() {
     try {
-      const artifactsPath = path.join(__dirname, '../../artifacts/contracts');
+      const artifactsPath = path.join(__dirname, '../../blockchain/artifacts/contracts');
       
       // Contract configurations
       const contractConfigs = [

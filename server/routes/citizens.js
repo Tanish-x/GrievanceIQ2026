@@ -49,6 +49,7 @@ function extractAddressFromToken(req) {
  * @access Private - requires authentication
  */
 router.get('/profile', 
+  ensureBlockchain,
   verifyToken, 
   attachUserContext, 
   asyncHandler(async (req, res) => {
