@@ -142,7 +142,7 @@ function App() {
             color: '#000080',
             textShadow: '2px 2px 4px rgba(0,0,0,0.1)'
           }}>
-            🇮🇳 ग्रीवांस आईक्यू • GrievanceIQ
+             GrievanceIQ
           </Typography>
           <Typography variant="h5" gutterBottom sx={{ 
             opacity: 0.8,
@@ -240,7 +240,7 @@ function App() {
             style={{ display: 'flex', alignItems: 'center', flexGrow: 1 }}
           >
             <Box sx={{ display: 'flex', alignItems: 'center' }}>
-              <Typography sx={{ fontSize: '2rem', mr: 2 }}>🇮🇳</Typography>
+              <Typography sx={{ fontSize: '2rem', mr: 2 }}></Typography>
               <Box>
                 <Typography variant="h5" sx={{ 
                   fontWeight: 900, 
@@ -249,7 +249,7 @@ function App() {
                   lineHeight: 1,
                   textShadow: '1px 1px 2px rgba(0,0,0,0.1)'
                 }}>
-                  ग्रीवांस आईक्यू
+                  GrievanceIQ
                 </Typography>
                 <Typography variant="h6" sx={{ 
                   fontWeight: 700,
@@ -361,7 +361,7 @@ function App() {
                 '& .MuiAlert-icon': { color: 'white', fontSize: '1.5rem' }
               }}
             >
-              🎉 ग्रीवांस आईक्यू में आपका स्वागत है! • Welcome to GrievanceIQ! Your wallet is now connected and you can access all governance services.
+              🎉 Welcome to GrievanceIQ! • Welcome to GrievanceIQ! Your wallet is now connected and you can access all governance services.
             </Alert>
           </motion.div>
         )}
@@ -406,7 +406,7 @@ function App() {
                   textShadow: '3px 3px 6px rgba(0,0,0,0.3)',
                   mb: 2
                 }}>
-                  🇮🇳 ग्रीवांस आईक्यू में आपका स्वागत है
+                   Welcome to GrievanceIQ
                 </Typography>
                 <Typography variant="h3" gutterBottom sx={{ 
                   fontWeight: 700,
@@ -596,17 +596,17 @@ function App() {
           <Grid container spacing={4} alignItems="center">
             <Grid item xs={12} md={6}>
               <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
-                <Typography sx={{ fontSize: '2rem', mr: 2 }}>🇮🇳</Typography>
+                <Typography sx={{ fontSize: '2rem', mr: 2 }}></Typography>
                 <Box>
                   <Typography variant="h6" sx={{ 
                     fontWeight: 700,
                     color: '#000080',
                     fontFamily: '"Playfair Display", serif'
                   }}>
-                    ग्रीवांस आईक्यू • GrievanceIQ
+                    GrievanceIQ
                   </Typography>
                   <Typography variant="body2" sx={{ color: '#7B3F00', fontWeight: 600 }}>
-                    भारत सरकार की पहल • Government of India Initiative
+                    Digital Governance Platform
                   </Typography>
                 </Box>
               </Box>
@@ -616,7 +616,7 @@ function App() {
             </Grid>
             <Grid item xs={12} md={6} sx={{ textAlign: { xs: 'center', md: 'right' } }}>
               <Typography className="bharat-sanskrit" sx={{ mb: 2, fontSize: '1rem' }}>
-                सत्यमेव जयते • Truth Alone Triumphs
+                Transparent. Accountable. Citizen-first.
               </Typography>
               <Typography variant="body2" sx={{ 
                 color: '#7B3F00',

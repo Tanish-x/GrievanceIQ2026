@@ -89,7 +89,7 @@ const initialState = {
   aiProcessing: false,
   aiProgress: 0,
   
-  // Government Services Data
+  // Public Services Data
   govServices: [],
   identityVerifications: [],
   govServiceApplications: [],

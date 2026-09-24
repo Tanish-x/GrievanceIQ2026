@@ -135,7 +135,7 @@ const CitizenDashboard = () => {
 
   // Helper function for tab emojis
   const getTabEmoji = (index) => {
-    const emojis = ['🏠', '👤', '📄', '📋', '🤖', '🏛️', '📱', '💳', '🚨', '📊', '🔒'];
+    const emojis = ['🏠', '👤', '📄', '📋', '🤖', '🏢', '📱', '💳', '🚨', '📊', '🔒'];
     return emojis[index] || '📊';
   };
 
@@ -212,7 +212,7 @@ const CitizenDashboard = () => {
   const [selectedAnalysis, setSelectedAnalysis] = useState(null);
   const [analysisDetailOpen, setAnalysisDetailOpen] = useState(false);
 
-  // Government Services state
+  // Public Services state
   const [govServices, setGovServices] = useState([]);
   const [govServicesLoading, setGovServicesLoading] = useState(false);
   const [selectedGovService, setSelectedGovService] = useState(null);
@@ -1197,7 +1197,7 @@ const CitizenDashboard = () => {
     { label: 'Documents', icon: <DocumentIcon /> },
     { label: 'Grievances', icon: <GrievanceIcon /> },
     { label: 'AI Analysis', icon: <SmartToyIcon /> },
-    { label: 'Government Services', icon: <AccountBalance /> },
+    { label: 'Public Services', icon: <AccountBalance /> },
     { label: 'QR & Mobile', icon: <PhotoCamera /> },
     { label: 'Payments', icon: <AccountBalance /> },
     { label: 'Emergency', icon: <ErrorIcon /> },
@@ -1369,7 +1369,7 @@ const CitizenDashboard = () => {
                 { title: 'सत्यापित दस्तावेज़', subtitle: 'Verified Documents', value: stats.verifiedDocuments, icon: <Verified />, color: '#10B981' },
                 { title: 'लंबित शिकायतें', subtitle: 'Pending Grievances', value: stats.pendingGrievances, icon: <PendingIcon />, color: '#F59E0B' },
                 { title: 'हल की गई समस्याएं', subtitle: 'Resolved Issues', value: stats.resolvedGrievances, icon: <CheckCircle />, color: '#6366F1' },
-                { title: 'सरकारी सेवाएं', subtitle: 'Government Services', value: stats.governmentServices || 12, icon: <AccountBalance />, color: '#EC4899' },
+                { title: 'Public Services', subtitle: 'Public Services', value: stats.governmentServices || 12, icon: <AccountBalance />, color: '#EC4899' },
                 { title: 'मोबाइल सुविधाएं', subtitle: 'Mobile Features', value: stats.mobileFeatures || 4, icon: <SmartToyIcon />, color: '#8B5CF6' },
                 { title: 'भुगतान इतिहास', subtitle: 'Payment History', value: stats.completedPayments || 0, icon: <AccountBalance />, color: '#14B8A6' },
                 { title: 'आपातकालीन सेवाएं', subtitle: 'Emergency Services', value: stats.emergencyContacts || 3, icon: <Security />, color: '#EF4444' }
@@ -1447,7 +1447,7 @@ const CitizenDashboard = () => {
               {[
                 { title: 'दस्तावेज़ अपलोड', subtitle: 'Upload Document', icon: '📤', action: () => setCurrentTab(2) },
                 { title: 'प्रोफ़ाइल अपडेट', subtitle: 'Update Profile', icon: '👤', action: () => setCurrentTab(1) },
-                { title: 'सरकारी सेवाएं', subtitle: 'Government Services', icon: '🏛️', action: () => setCurrentTab(5) },
+                { title: 'Public Services', subtitle: 'Public Services', icon: '🏢', action: () => setCurrentTab(5) },
                 { title: 'QR और मोबाइल', subtitle: 'QR & Mobile', icon: '📱', action: () => setCurrentTab(6) },
                 { title: 'भुगतान सेवाएं', subtitle: 'Payment Services', icon: '💳', action: () => setCurrentTab(7) },
                 { title: 'आपातकालीन सेवाएं', subtitle: 'Emergency Services', icon: '🚨', action: () => setCurrentTab(8) }
@@ -1714,7 +1714,7 @@ const CitizenDashboard = () => {
                     <Alert severity="info" className="bharat-alert bharat-alert-info" sx={{ mb: 4 }}>
                       <Box>
                         <Typography sx={{ fontWeight: 700, mb: 1 }}>
-                          🙏 ग्रीवांस आईक्यू में आपका स्वागत है! • Welcome to GrievanceIQ!
+                          🙏 Welcome to GrievanceIQ! • Welcome to GrievanceIQ!
                         </Typography>
                         <Typography>
                           कृपया अपना नागरिक पंजीकरण पूरा करने और सभी प्लेटफॉर्म सुविधाओं को अनलॉक करने के लिए "प्रोफ़ाइल संपादित करें" पर क्लिक करें।
@@ -3345,7 +3345,7 @@ const CitizenDashboard = () => {
           </Dialog>
         </TabPanel>
 
-        {/* Government Services Tab */}
+        {/* Public Services Tab */}
         <TabPanel key="government-services" value={currentTab} index={5}>
           <Grid container spacing={4}>
             {/* Header */}
@@ -3358,7 +3358,7 @@ const CitizenDashboard = () => {
                     fontFamily: '"Playfair Display", serif',
                     mb: 2
                   }}>
-                    🏛️ सरकारी सेवाएं • Government Services
+                    🏢 Public Services • Public Services
                   </Typography>
                   <Typography variant="body1" color="text.secondary" sx={{ mb: 3 }}>
                     आधार, पैन, पासपोर्ट सत्यापन और अन्य सरकारी सेवाओं तक पहुंच
@@ -3568,7 +3568,7 @@ const CitizenDashboard = () => {
                       { name: 'MEA (Passport)', status: 'Connected', icon: '📘', color: 'success' },
                       { name: 'Election Commission', status: 'Connected', icon: '🗳️', color: 'success' },
                       { name: 'DigiLocker', status: 'Connected', icon: '📱', color: 'success' },
-                      { name: 'State Governments', status: 'Partial', icon: '🏛️', color: 'warning' }
+                      { name: 'State Governments', status: 'Partial', icon: '🏢', color: 'warning' }
                     ].map((integration, index) => (
                       <Grid item xs={12} sm={6} md={4} key={index}>
                         <Box sx={{ 
@@ -3640,7 +3640,7 @@ const CitizenDashboard = () => {
                     {[
                       { type: 'Citizen ID', icon: '👤', desc: 'नागरिक पहचान QR' },
                       { type: 'Document', icon: '📄', desc: 'दस्तावेज़ QR कोड' },
-                      { type: 'Service', icon: '🏛️', desc: 'सेवा पहुंच QR' },
+                      { type: 'Service', icon: '🏢', desc: 'सेवा पहुंच QR' },
                       { type: 'Payment', icon: '💳', desc: 'भुगतान QR कोड' }
                     ].map((qrType, index) => (
                       <Grid item xs={6} key={index}>

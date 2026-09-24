@@ -70,7 +70,7 @@ const SystemStatusGrid = ({
       englishName: 'Government APIs', 
       status: 'Connected',
       statusHindi: 'जुड़ा हुआ',
-      icon: '🏛️',
+      icon: '🏢',
       gradient: 'linear-gradient(135deg, #8B0000 0%, #DC143C 100%)',
       uptime: '99.2%',
       responseTime: '180ms'

@@ -134,7 +134,7 @@ describe('QuickActionCard Component', () => {
     icon: '📤',
     action: jest.fn(),
     gradient: 'linear-gradient(135deg, #FF6B35 0%, #F7931E 100%)',
-    bgPattern: '🏛️'
+    bgPattern: '🏢'
   };
 
   test('renders action card with correct content', () => {
@@ -273,7 +273,7 @@ describe('CitizenDashboard Component', () => {
     );
 
     await waitFor(() => {
-      expect(screen.getByText('🇮🇳 ग्रीवांस आईक्यू डैशबोर्ड 🇮🇳')).toBeInTheDocument();
+      expect(screen.getByText(' GrievanceIQ ')).toBeInTheDocument();
     });
     
     expect(screen.getByText('BharatChain Digital Identity Platform')).toBeInTheDocument();
@@ -395,7 +395,7 @@ describe('Integration Tests', () => {
 
     // Test that all major sections render
     await waitFor(() => {
-      expect(screen.getByText('ग्रीवांस आईक्यू डैशबोर्ड')).toBeInTheDocument();
+      expect(screen.getByText('GrievanceIQ')).toBeInTheDocument();
     });
     
     expect(screen.getByText('Dashboard Statistics')).toBeInTheDocument();
