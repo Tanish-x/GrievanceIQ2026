@@ -53,7 +53,7 @@ router.get('/', async (req, res) => {
 
     res.json({
       success: true,
-      message: 'BharatChain API Health Check',
+      message: 'GrievanceIQ API Health Check',
       data: healthData
     });
 

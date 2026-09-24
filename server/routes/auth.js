@@ -66,7 +66,7 @@ router.post('/message', [
     });
 
     // Create message to sign
-    const message = `Welcome to BharatChain!
+    const message = `Welcome to GrievanceIQ!
     
 This signature request proves you own this wallet address and will be used to log you into the platform.
 
@@ -78,7 +78,7 @@ This request will not trigger any blockchain transaction or cost any gas fees.`;
 
     res.json({
       success: true,
-      message: 'Sign this message to authenticate with BharatChain',
+      message: 'Sign this message to authenticate with GrievanceIQ',
       data: {
         message,
         nonce,
@@ -170,7 +170,7 @@ router.post('/connect', [
     }
 
     // Reconstruct the message that was signed
-    const message = `Welcome to BharatChain!
+    const message = `Welcome to GrievanceIQ!
     
 This signature request proves you own this wallet address and will be used to log you into the platform.
 

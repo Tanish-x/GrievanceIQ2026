@@ -115,7 +115,7 @@ class NotificationService {
   initializeTemplates() {
     return {
       citizen_registered: {
-        title: 'Welcome to BharatChain! 🎉',
+        title: 'Welcome to GrievanceIQ! 🎉',
         message: 'Your citizen registration has been successfully completed. You can now access all government services.',
         type: 'citizen_registration',
         priority: 'high',
@@ -180,7 +180,7 @@ class NotificationService {
       },
       system_maintenance: {
         title: 'System Maintenance Notice 🔧',
-        message: 'BharatChain will undergo scheduled maintenance on {date} from {startTime} to {endTime}.',
+        message: 'GrievanceIQ will undergo scheduled maintenance on {date} from {startTime} to {endTime}.',
         type: 'system_announcement',
         priority: 'medium',
         actionLabel: 'Learn More',
