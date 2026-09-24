@@ -51,7 +51,7 @@ const SystemStatusGrid = ({
       status: 'Available',
       statusHindi: 'उपलब्ध',
       icon: '🤖',
-      gradient: 'linear-gradient(135deg, #E49B0F 0%, #FFA500 100%)',
+      gradient: 'linear-gradient(135deg, #0891B2 0%, #0EA5E9 100%)',
       uptime: '98.8%',
       responseTime: '250ms'
     },
@@ -61,7 +61,7 @@ const SystemStatusGrid = ({
       status: 'Active',
       statusHindi: 'सक्रिय',
       icon: '✅',
-      gradient: 'linear-gradient(135deg, #FF6B35 0%, #F7931E 100%)',
+      gradient: 'linear-gradient(135deg, #7C3AED 0%, #A855F7 100%)',
       uptime: '99.7%',
       responseTime: '95ms'
     },

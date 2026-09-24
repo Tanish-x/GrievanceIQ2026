@@ -70,7 +70,7 @@ describe('StatCard Component', () => {
     subtitle: 'Total Documents',
     value: 5,
     icon: '📜',
-    gradient: 'linear-gradient(135deg, #FF6B35 0%, #F7931E 50%, #22D3EE 100%)',
+    gradient: 'linear-gradient(135deg, #7C3AED 0%, #A855F7 50%, #22D3EE 100%)',
     trend: '+12%',
     description: 'सभी अपलोड किए गए दस्तावेज़'
   };
@@ -133,7 +133,7 @@ describe('QuickActionCard Component', () => {
     englishDesc: 'Add new documents for verification',
     icon: '📤',
     action: jest.fn(),
-    gradient: 'linear-gradient(135deg, #FF6B35 0%, #F7931E 100%)',
+    gradient: 'linear-gradient(135deg, #7C3AED 0%, #A855F7 100%)',
     bgPattern: '🏢'
   };
 

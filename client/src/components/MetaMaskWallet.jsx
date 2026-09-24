@@ -256,8 +256,8 @@ const MetaMaskWallet = ({ onWalletConnect, onWalletDisconnect }) => {
     const getNetworkColor = (networkId) => {
         const colors = {
             1: '#627EEA', // Ethereum blue
-            31337: '#FFA500', // Orange for Hardhat
-            11155111: '#FF6B35' // Red for Sepolia
+            31337: '#0EA5E9', // Orange for Hardhat
+            11155111: '#7C3AED' // Red for Sepolia
         };
         return colors[networkId] || '#999999';
     };

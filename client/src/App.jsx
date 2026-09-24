@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   Box,
   Container,
@@ -381,13 +381,13 @@ function App() {
               sx={{
                 textAlign: 'center',
                 py: 10,
-                background: 'linear-gradient(135deg, #FF6B35 0%, #F7931E 50%, #22D3EE 100%)',
+                background: 'linear-gradient(135deg, #4F46E5 0%, #06B6D4 100%)',
                 borderRadius: 5,
                 color: 'white',
                 mb: 6,
                 position: 'relative',
                 overflow: 'hidden',
-                border: '3px solid #22D3EE'
+                border: '3px solid rgba(79, 70, 229, 0.3)'
               }}
             >
               <Box sx={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, opacity: 0.1 }}>
@@ -400,14 +400,7 @@ function App() {
                 style={{ position: 'relative', zIndex: 2 }}
               >
                 <div className="bharat-chakra" style={{ margin: '0 auto 30px' }}></div>
-                <Typography variant="h1" gutterBottom sx={{ 
-                  fontWeight: 900,
-                  fontFamily: '"Playfair Display", serif',
-                  textShadow: '3px 3px 6px rgba(0,0,0,0.3)',
-                  mb: 2
-                }}>
-                   Welcome to GrievanceIQ
-                </Typography>
+                
                 <Typography variant="h3" gutterBottom sx={{ 
                   fontWeight: 700,
                   opacity: 0.95, 
@@ -475,7 +468,7 @@ function App() {
                   subtitle: 'Fast Processing',
                   description: 'AI-संचालित दस्तावेज़ विश्लेषण और तुरंत सत्यापन',
                   englishDesc: 'AI-powered document analysis and instant verification',
-                  gradient: 'linear-gradient(135deg, #FF6B35 0%, #F7931E 100%)'
+                  gradient: 'linear-gradient(135deg, #7C3AED 0%, #A855F7 100%)'
                 },
                 {
                   icon: '✅',
@@ -483,7 +476,7 @@ function App() {
                   subtitle: 'Government Verified',
                   description: 'अधिकृत पहुंच के साथ आधिकारिक सरकारी प्लेटफॉर्म',
                   englishDesc: 'Official government platform with authorized access',
-                  gradient: 'linear-gradient(135deg, #E49B0F 0%, #FFA500 100%)'
+                  gradient: 'linear-gradient(135deg, #0891B2 0%, #0EA5E9 100%)'
                 },
                 {
                   icon: '📊',

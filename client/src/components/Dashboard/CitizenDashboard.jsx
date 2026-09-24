@@ -1564,7 +1564,7 @@ const CitizenDashboard = () => {
                         className="bharat-button"
                         sx={{ 
                           ml: 2,
-                          background: 'linear-gradient(135deg, #FF6B35 0%, #F7931E 100%)',
+                          background: 'linear-gradient(135deg, #7C3AED 0%, #A855F7 100%)',
                           px: 3,
                           py: 1.5,
                           borderRadius: '25px',
@@ -1604,7 +1604,7 @@ const CitizenDashboard = () => {
                             borderRadius: '25px',
                             fontWeight: 700,
                             '&:hover': {
-                              borderColor: '#FF6B35',
+                              borderColor: '#7C3AED',
                               backgroundColor: 'rgba(255, 153, 51, 0.1)'
                             }
                           }}
@@ -1691,7 +1691,7 @@ const CitizenDashboard = () => {
                               borderRadius: '20px',
                               fontWeight: 600,
                               '&:hover': {
-                                borderColor: '#FF6B35',
+                                borderColor: '#7C3AED',
                                 backgroundColor: 'rgba(255, 153, 51, 0.1)'
                               }
                             }}
@@ -1769,7 +1769,7 @@ const CitizenDashboard = () => {
                               borderColor: '#4F46E5'
                             },
                             '&.Mui-focused fieldset': {
-                              borderColor: '#FF6B35'
+                              borderColor: '#7C3AED'
                             }
                           },
                           '& .MuiInputLabel-root': {
@@ -3384,7 +3384,7 @@ const CitizenDashboard = () => {
                 description: 'OTP के साथ आधार संख्या सत्यापित करें',
                 englishDesc: 'Verify Aadhaar number with OTP',
                 icon: '🆔',
-                gradient: 'linear-gradient(135deg, #FF6B35 0%, #F7931E 100%)',
+                gradient: 'linear-gradient(135deg, #7C3AED 0%, #A855F7 100%)',
                 action: () => alert('Aadhaar verification coming soon!'),
                 status: 'Available'
               },
@@ -3414,7 +3414,7 @@ const CitizenDashboard = () => {
                 description: 'मतदाता पहचान पत्र सत्यापन',
                 englishDesc: 'Voter identity card verification',
                 icon: '🗳️',
-                gradient: 'linear-gradient(135deg, #E49B0F 0%, #FFA500 100%)',
+                gradient: 'linear-gradient(135deg, #0891B2 0%, #0EA5E9 100%)',
                 action: () => alert('Voter ID verification coming soon!'),
                 status: 'Available'
               }
@@ -3506,7 +3506,7 @@ const CitizenDashboard = () => {
                 description: 'आय प्रमाण पत्र आवेदन',
                 englishDesc: 'Income certificate application',
                 icon: '💰',
-                gradient: 'linear-gradient(135deg, #B22222 0%, #FF6347 100%)',
+                gradient: 'linear-gradient(135deg, #B22222 0%, #06B6D4 100%)',
                 action: () => alert('Income certificate application coming soon!'),
                 status: 'Coming Soon'
               }
@@ -3652,7 +3652,7 @@ const CitizenDashboard = () => {
                             borderColor: '#4F46E5',
                             color: '#7B3F00',
                             '&:hover': {
-                              borderColor: '#FF6B35',
+                              borderColor: '#7C3AED',
                               backgroundColor: 'rgba(255, 153, 51, 0.1)'
                             }
                           }}
@@ -3810,7 +3810,7 @@ const CitizenDashboard = () => {
                 englishService: 'Passport Fees',
                 amount: '₹1,500',
                 icon: '📘',
-                gradient: 'linear-gradient(135deg, #FF6B35 0%, #F7931E 100%)',
+                gradient: 'linear-gradient(135deg, #7C3AED 0%, #A855F7 100%)',
                 description: 'नया पासपोर्ट आवेदन शुल्क'
               },
               {
@@ -3834,7 +3834,7 @@ const CitizenDashboard = () => {
                 englishService: 'Certificates',
                 amount: '₹50',
                 icon: '📋',
-                gradient: 'linear-gradient(135deg, #E49B0F 0%, #FFA500 100%)',
+                gradient: 'linear-gradient(135deg, #0891B2 0%, #0EA5E9 100%)',
                 description: 'विभिन्न प्रमाण पत्र शुल्क'
               }
             ].map((payment, index) => (
@@ -4336,7 +4336,7 @@ const CitizenDashboard = () => {
                 englishCategory: 'Demographics',
                 datasets: '125',
                 icon: '👥',
-                gradient: 'linear-gradient(135deg, #FF6B35 0%, #F7931E 100%)',
+                gradient: 'linear-gradient(135deg, #7C3AED 0%, #A855F7 100%)',
                 description: 'जनसंख्या और जनसांख्यिकी डेटा'
               },
               {
@@ -4360,7 +4360,7 @@ const CitizenDashboard = () => {
                 englishCategory: 'Education',
                 datasets: '43',
                 icon: '📚',
-                gradient: 'linear-gradient(135deg, #E49B0F 0%, #FFA500 100%)',
+                gradient: 'linear-gradient(135deg, #0891B2 0%, #0EA5E9 100%)',
                 description: 'शैक्षणिक आंकड़े और संस्थान डेटा'
               }
             ].map((dataset, index) => (
@@ -4535,7 +4535,7 @@ const CitizenDashboard = () => {
                 status: '92%',
                 level: 'उच्च • High',
                 icon: '💰',
-                gradient: 'linear-gradient(135deg, #FF6B35 0%, #F7931E 100%)',
+                gradient: 'linear-gradient(135deg, #7C3AED 0%, #A855F7 100%)',
                 description: 'वित्तीय पारदर्शिता और ऑडिट'
               },
               {
@@ -4544,7 +4544,7 @@ const CitizenDashboard = () => {
                 status: '78%',
                 level: 'मध्यम • Medium',
                 icon: '⚖️',
-                gradient: 'linear-gradient(135deg, #E49B0F 0%, #FFA500 100%)',
+                gradient: 'linear-gradient(135deg, #0891B2 0%, #0EA5E9 100%)',
                 description: 'कानूनी नियमों का अनुपालन'
               }
             ].map((compliance, index) => (
