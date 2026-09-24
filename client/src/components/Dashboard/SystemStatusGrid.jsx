@@ -31,7 +31,7 @@ const SystemStatusGrid = ({
       status: 'Connected',
       statusHindi: 'जुड़ा हुआ',
       icon: '🔗',
-      gradient: 'linear-gradient(135deg, #138808 0%, #50C878 100%)',
+      gradient: 'linear-gradient(135deg, #06B6D4 0%, #0EA5E9 100%)',
       uptime: '99.9%',
       responseTime: '120ms'
     },
@@ -138,10 +138,10 @@ const SystemStatusGrid = ({
                 <IconButton
                   onClick={() => setExpanded(!expanded)}
                   sx={{ 
-                    color: '#FF9933',
+                    color: '#4F46E5',
                     background: 'linear-gradient(135deg, rgba(255, 153, 51, 0.1) 0%, rgba(255, 215, 0, 0.1) 100%)',
                     '&:hover': {
-                      background: 'linear-gradient(135deg, #FF9933 0%, #FFD700 100%)',
+                      background: 'linear-gradient(135deg, #4F46E5 0%, #22D3EE 100%)',
                       color: 'white'
                     }
                   }}
@@ -157,10 +157,10 @@ const SystemStatusGrid = ({
                 disabled={isLoading}
                 size="large" 
                 sx={{ 
-                  color: '#FF9933',
+                  color: '#4F46E5',
                   background: 'linear-gradient(135deg, rgba(255, 153, 51, 0.1) 0%, rgba(255, 215, 0, 0.1) 100%)',
                   '&:hover': {
-                    background: 'linear-gradient(135deg, #FF9933 0%, #FFD700 100%)',
+                    background: 'linear-gradient(135deg, #4F46E5 0%, #22D3EE 100%)',
                     color: 'white'
                   }
                 }}
@@ -331,7 +331,7 @@ const SystemStatusGrid = ({
               border: '1px solid rgba(255, 153, 51, 0.2)'
             }}>
               <Box sx={{ textAlign: 'center' }}>
-                <Typography variant="h6" sx={{ color: '#138808', fontWeight: 700 }}>
+                <Typography variant="h6" sx={{ color: '#06B6D4', fontWeight: 700 }}>
                   {systemServices.filter(s => s.status.includes('Connected') || s.status.includes('Active') || s.status.includes('Online')).length}
                 </Typography>
                 <Typography variant="caption" sx={{ color: '#7B3F00' }}>
@@ -339,7 +339,7 @@ const SystemStatusGrid = ({
                 </Typography>
               </Box>
               <Box sx={{ textAlign: 'center' }}>
-                <Typography variant="h6" sx={{ color: '#FF9933', fontWeight: 700 }}>
+                <Typography variant="h6" sx={{ color: '#4F46E5', fontWeight: 700 }}>
                   99.6%
                 </Typography>
                 <Typography variant="caption" sx={{ color: '#7B3F00' }}>

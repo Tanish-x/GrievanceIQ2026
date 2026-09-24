@@ -1582,7 +1582,7 @@ const CitizenDashboard = () => {
                           onClick={handleProfileSave}
                           disabled={profileLoading}
                           sx={{
-                            background: 'linear-gradient(135deg, #138808 0%, #50C878 100%)',
+                            background: 'linear-gradient(135deg, #06B6D4 0%, #0EA5E9 100%)',
                             px: 3,
                             py: 1.5,
                             borderRadius: '25px',
@@ -1597,8 +1597,8 @@ const CitizenDashboard = () => {
                           onClick={handleProfileCancel}
                           disabled={profileLoading}
                           sx={{
-                            borderColor: '#FF9933',
-                            color: '#FF9933',
+                            borderColor: '#4F46E5',
+                            color: '#4F46E5',
                             px: 3,
                             py: 1.5,
                             borderRadius: '25px',
@@ -1686,8 +1686,8 @@ const CitizenDashboard = () => {
                             component="label"
                             startIcon={<PhotoCamera />}
                             sx={{
-                              borderColor: '#FF9933',
-                              color: '#FF9933',
+                              borderColor: '#4F46E5',
+                              color: '#4F46E5',
                               borderRadius: '20px',
                               fontWeight: 600,
                               '&:hover': {
@@ -1741,7 +1741,7 @@ const CitizenDashboard = () => {
                     color: '#000080',
                     fontFamily: '"Playfair Display", serif'
                   }}>
-                    <PersonIcon sx={{ mr: 2, color: '#FF9933' }} />
+                    <PersonIcon sx={{ mr: 2, color: '#4F46E5' }} />
                     व्यक्तिगत जानकारी • Personal Information
                   </Typography>
                   
@@ -1766,7 +1766,7 @@ const CitizenDashboard = () => {
                               borderWidth: '2px'
                             },
                             '&:hover fieldset': {
-                              borderColor: '#FF9933'
+                              borderColor: '#4F46E5'
                             },
                             '&.Mui-focused fieldset': {
                               borderColor: '#FF6B35'
@@ -1839,7 +1839,7 @@ const CitizenDashboard = () => {
                         disabled={!isEditingProfile}
                         variant={isEditingProfile ? "outlined" : "filled"}
                         InputProps={{
-                          startAdornment: <School sx={{ mr: 1, color: '#FF9933' }} />
+                          startAdornment: <School sx={{ mr: 1, color: '#4F46E5' }} />
                         }}
                         sx={{
                           '& .MuiOutlinedInput-root': {
@@ -1866,7 +1866,7 @@ const CitizenDashboard = () => {
                         disabled={!isEditingProfile}
                         variant={isEditingProfile ? "outlined" : "filled"}
                         InputProps={{
-                          startAdornment: <Work sx={{ mr: 1, color: '#FF9933' }} />
+                          startAdornment: <Work sx={{ mr: 1, color: '#4F46E5' }} />
                         }}
                         sx={{
                           '& .MuiOutlinedInput-root': {
@@ -3394,7 +3394,7 @@ const CitizenDashboard = () => {
                 description: 'पैन कार्ड नाम मिलान के साथ सत्यापित करें',
                 englishDesc: 'Verify PAN card with name matching',
                 icon: '💳',
-                gradient: 'linear-gradient(135deg, #138808 0%, #50C878 100%)',
+                gradient: 'linear-gradient(135deg, #06B6D4 0%, #0EA5E9 100%)',
                 action: () => alert('PAN verification coming soon!'),
                 status: 'Available'
               },
@@ -3649,7 +3649,7 @@ const CitizenDashboard = () => {
                           variant="outlined"
                           sx={{
                             p: 2,
-                            borderColor: '#FF9933',
+                            borderColor: '#4F46E5',
                             color: '#7B3F00',
                             '&:hover': {
                               borderColor: '#FF6B35',
@@ -3701,7 +3701,7 @@ const CitizenDashboard = () => {
                   {/* OTP Authentication */}
                   <Box sx={{ mb: 3 }}>
                     <Typography variant="h6" sx={{ mb: 2, display: 'flex', alignItems: 'center' }}>
-                      <Phone sx={{ mr: 1, color: '#FF9933' }} />
+                      <Phone sx={{ mr: 1, color: '#4F46E5' }} />
                       OTP प्रमाणीकरण • OTP Authentication
                     </Typography>
                     <TextField
@@ -3714,7 +3714,7 @@ const CitizenDashboard = () => {
                       variant="contained"
                       startIcon={<Send />}
                       sx={{
-                        background: 'linear-gradient(135deg, #138808 0%, #50C878 100%)',
+                        background: 'linear-gradient(135deg, #06B6D4 0%, #0EA5E9 100%)',
                         mr: 2
                       }}
                       onClick={() => alert('Send OTP coming soon!')}
@@ -3726,7 +3726,7 @@ const CitizenDashboard = () => {
                   {/* Offline Sync Status */}
                   <Box sx={{ mb: 3 }}>
                     <Typography variant="h6" sx={{ mb: 2, display: 'flex', alignItems: 'center' }}>
-                      <CloudDownload sx={{ mr: 1, color: '#FF9933' }} />
+                      <CloudDownload sx={{ mr: 1, color: '#4F46E5' }} />
                       ऑफलाइन सिंक • Offline Sync
                     </Typography>
                     <Box sx={{ 
@@ -3748,7 +3748,7 @@ const CitizenDashboard = () => {
                   {/* App Configuration */}
                   <Box>
                     <Typography variant="h6" sx={{ mb: 2, display: 'flex', alignItems: 'center' }}>
-                      <SettingsOutlined sx={{ mr: 1, color: '#FF9933' }} />
+                      <SettingsOutlined sx={{ mr: 1, color: '#4F46E5' }} />
                       ऐप कॉन्फ़िगरेशन • App Configuration
                     </Typography>
                     <FormControlLabel
@@ -3818,7 +3818,7 @@ const CitizenDashboard = () => {
                 englishService: 'PAN Card',
                 amount: '₹110',
                 icon: '💳',
-                gradient: 'linear-gradient(135deg, #138808 0%, #50C878 100%)',
+                gradient: 'linear-gradient(135deg, #06B6D4 0%, #0EA5E9 100%)',
                 description: 'नया PAN कार्ड शुल्क'
               },
               {
@@ -3905,7 +3905,7 @@ const CitizenDashboard = () => {
                           display: 'flex',
                           alignItems: 'center',
                           p: 2,
-                          border: '1px solid #FF9933',
+                          border: '1px solid #4F46E5',
                           borderRadius: 2,
                           backgroundColor: 'rgba(255, 153, 51, 0.1)'
                         }}>
@@ -3951,7 +3951,7 @@ const CitizenDashboard = () => {
                       variant="outlined"
                       sx={{
                         mt: 2,
-                        borderColor: '#FF9933',
+                        borderColor: '#4F46E5',
                         color: '#7B3F00'
                       }}
                       onClick={() => alert('View all payments coming soon!')}
@@ -4127,9 +4127,9 @@ const CitizenDashboard = () => {
                       { name: 'कार्यालय संपर्क • Office Contact', number: '+91 XXXXX XXXXX', type: 'work' },
                       { name: 'मित्र संपर्क • Friend Contact', number: '+91 XXXXX XXXXX', type: 'friend' }
                     ].map((contact, index) => (
-                      <ListItem key={index} sx={{ border: '1px solid #FF9933', borderRadius: 2, mb: 1 }}>
+                      <ListItem key={index} sx={{ border: '1px solid #4F46E5', borderRadius: 2, mb: 1 }}>
                         <ListItemAvatar>
-                          <Avatar sx={{ backgroundColor: '#FF9933' }}>
+                          <Avatar sx={{ backgroundColor: '#4F46E5' }}>
                             {contact.type === 'family' ? '👨‍👩‍👧‍👦' : contact.type === 'work' ? '💼' : '👥'}
                           </Avatar>
                         </ListItemAvatar>
@@ -4140,7 +4140,7 @@ const CitizenDashboard = () => {
                         <ListItemSecondaryAction>
                           <IconButton 
                             edge="end"
-                            sx={{ color: '#138808' }}
+                            sx={{ color: '#06B6D4' }}
                             onClick={() => alert(`Calling ${contact.name}`)}
                           >
                             <Phone />
@@ -4155,7 +4155,7 @@ const CitizenDashboard = () => {
                     startIcon={<AddIcon />}
                     sx={{
                       mt: 2,
-                      borderColor: '#FF9933',
+                      borderColor: '#4F46E5',
                       color: '#7B3F00'
                     }}
                     onClick={() => alert('Add emergency contact coming soon!')}
@@ -4277,7 +4277,7 @@ const CitizenDashboard = () => {
                         variant="contained"
                         size="large"
                         sx={{
-                          background: 'linear-gradient(135deg, #138808 0%, #50C878 100%)',
+                          background: 'linear-gradient(135deg, #06B6D4 0%, #0EA5E9 100%)',
                           py: 1.5,
                           px: 4
                         }}
@@ -4311,7 +4311,7 @@ const CitizenDashboard = () => {
                     <Button
                       variant="outlined"
                       sx={{
-                        borderColor: '#FF9933',
+                        borderColor: '#4F46E5',
                         color: '#7B3F00'
                       }}
                       onClick={() => alert('View RTI history coming soon!')}
@@ -4344,7 +4344,7 @@ const CitizenDashboard = () => {
                 englishCategory: 'Economy',
                 datasets: '89',
                 icon: '💰',
-                gradient: 'linear-gradient(135deg, #138808 0%, #50C878 100%)',
+                gradient: 'linear-gradient(135deg, #06B6D4 0%, #0EA5E9 100%)',
                 description: 'आर्थिक संकेतक और बजट डेटा'
               },
               {
@@ -4419,8 +4419,8 @@ const CitizenDashboard = () => {
                   </Typography>
                   <Grid container spacing={3}>
                     <Grid item xs={12} md={4}>
-                      <Box sx={{ textAlign: 'center', p: 3, border: '2px solid #FF9933', borderRadius: 2 }}>
-                        <Typography variant="h3" sx={{ fontWeight: 700, color: '#FF9933', mb: 1 }}>
+                      <Box sx={{ textAlign: 'center', p: 3, border: '2px solid #4F46E5', borderRadius: 2 }}>
+                        <Typography variant="h3" sx={{ fontWeight: 700, color: '#4F46E5', mb: 1 }}>
                           ₹12.5L Cr
                         </Typography>
                         <Typography variant="h6" sx={{ color: '#000080' }}>
@@ -4432,8 +4432,8 @@ const CitizenDashboard = () => {
                       </Box>
                     </Grid>
                     <Grid item xs={12} md={4}>
-                      <Box sx={{ textAlign: 'center', p: 3, border: '2px solid #138808', borderRadius: 2 }}>
-                        <Typography variant="h3" sx={{ fontWeight: 700, color: '#138808', mb: 1 }}>
+                      <Box sx={{ textAlign: 'center', p: 3, border: '2px solid #06B6D4', borderRadius: 2 }}>
+                        <Typography variant="h3" sx={{ fontWeight: 700, color: '#06B6D4', mb: 1 }}>
                           68%
                         </Typography>
                         <Typography variant="h6" sx={{ color: '#000080' }}>
@@ -4464,7 +4464,7 @@ const CitizenDashboard = () => {
                     size="large"
                     sx={{
                       mt: 3,
-                      borderColor: '#FF9933',
+                      borderColor: '#4F46E5',
                       color: '#7B3F00',
                       py: 1.5
                     }}
@@ -4517,7 +4517,7 @@ const CitizenDashboard = () => {
                 status: '95%',
                 level: 'उच्च • High',
                 icon: '🔒',
-                gradient: 'linear-gradient(135deg, #138808 0%, #50C878 100%)',
+                gradient: 'linear-gradient(135deg, #06B6D4 0%, #0EA5E9 100%)',
                 description: 'व्यक्तिगत डेटा सुरक्षा अनुपालन'
               },
               {
@@ -4628,7 +4628,7 @@ const CitizenDashboard = () => {
                                 variant="outlined"
                                 size="small"
                                 sx={{
-                                  borderColor: '#FF9933',
+                                  borderColor: '#4F46E5',
                                   color: '#7B3F00'
                                 }}
                                 onClick={() => alert(`${report.action} audit report coming soon!`)}
@@ -4663,7 +4663,7 @@ const CitizenDashboard = () => {
                       size={120}
                       thickness={6}
                       sx={{
-                        color: '#138808',
+                        color: '#06B6D4',
                         '& .MuiCircularProgress-circle': {
                           strokeLinecap: 'round',
                         },
@@ -4679,7 +4679,7 @@ const CitizenDashboard = () => {
                       alignItems: 'center',
                       justifyContent: 'center',
                     }}>
-                      <Typography variant="h4" sx={{ fontWeight: 700, color: '#138808' }}>
+                      <Typography variant="h4" sx={{ fontWeight: 700, color: '#06B6D4' }}>
                         88%
                       </Typography>
                     </Box>
@@ -4693,7 +4693,7 @@ const CitizenDashboard = () => {
                   <Button
                     variant="contained"
                     sx={{
-                      background: 'linear-gradient(135deg, #138808 0%, #50C878 100%)'
+                      background: 'linear-gradient(135deg, #06B6D4 0%, #0EA5E9 100%)'
                     }}
                     onClick={() => alert('Detailed compliance report coming soon!')}
                   >

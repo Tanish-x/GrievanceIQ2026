@@ -70,7 +70,7 @@ describe('StatCard Component', () => {
     subtitle: 'Total Documents',
     value: 5,
     icon: '📜',
-    gradient: 'linear-gradient(135deg, #FF6B35 0%, #F7931E 50%, #FFD700 100%)',
+    gradient: 'linear-gradient(135deg, #FF6B35 0%, #F7931E 50%, #22D3EE 100%)',
     trend: '+12%',
     description: 'सभी अपलोड किए गए दस्तावेज़'
   };

@@ -34,7 +34,7 @@ const QuickActionCard = ({
           minHeight: { xs: '240px', sm: '280px' },
           backdropFilter: 'blur(20px)',
           '&:hover': {
-            borderColor: '#FF9933',
+            borderColor: '#4F46E5',
             boxShadow: '0 20px 60px rgba(255, 153, 51, 0.3)',
             '& .action-button': {
               background: action.gradient,
@@ -51,7 +51,7 @@ const QuickActionCard = ({
           right: -10, 
           fontSize: { xs: '3rem', sm: '5rem' }, 
           opacity: 0.08, 
-          color: '#FF9933',
+          color: '#4F46E5',
           display: { xs: 'none', sm: 'block' }
         }}>
           {action.bgPattern}
@@ -152,7 +152,7 @@ const QuickActionCard = ({
               py: { xs: 1, sm: 1.5 },
               fontWeight: 700,
               textTransform: 'none',
-              background: 'linear-gradient(135deg, #FF9933 0%, #FFD700 100%)',
+              background: 'linear-gradient(135deg, #4F46E5 0%, #22D3EE 100%)',
               color: 'white',
               transition: 'all 0.3s ease',
               boxShadow: '0 4px 16px rgba(255, 153, 51, 0.3)',

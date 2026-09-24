@@ -121,7 +121,7 @@ function App() {
           justifyContent: 'center',
           alignItems: 'center',
           minHeight: '100vh',
-          background: 'linear-gradient(135deg, #FF9933 0%, #FFFFFF 33%, #138808 66%)',
+          background: 'linear-gradient(135deg, #4F46E5 0%, #FFFFFF 33%, #06B6D4 66%)',
           color: '#000080',
           position: 'relative'
         }}
@@ -160,7 +160,7 @@ function App() {
               mx: 'auto',
               backgroundColor: 'rgba(255,255,255,0.3)',
               '& .MuiLinearProgress-bar': {
-                background: 'linear-gradient(90deg, #FF9933 0%, #FFFFFF 50%, #138808 100%)'
+                background: 'linear-gradient(90deg, #4F46E5 0%, #FFFFFF 50%, #06B6D4 100%)'
               }
             }} 
           />
@@ -208,7 +208,7 @@ function App() {
                 variant="contained"
                 onClick={resetConnection}
                 sx={{
-                  backgroundColor: '#FF9933',
+                  backgroundColor: '#4F46E5',
                   color: 'white',
                   '&:hover': { backgroundColor: '#E68929' },
                   fontWeight: 600
@@ -228,8 +228,8 @@ function App() {
     <Box sx={{ flexGrow: 1, minHeight: '100vh' }} className="bharat-container" style={{ margin: 0, borderRadius: 0 }}>
       {/* Indian Heritage App Bar */}
       <AppBar position="sticky" elevation={0} sx={{ 
-        background: 'linear-gradient(90deg, #FF9933 0%, #FFFFFF 50%, #138808 100%)',
-        borderBottom: '3px solid #FFD700',
+        background: 'linear-gradient(90deg, #4F46E5 0%, #FFFFFF 50%, #06B6D4 100%)',
+        borderBottom: '3px solid #22D3EE',
         color: '#000080'
       }}>
         <Toolbar sx={{ py: 1 }}>
@@ -269,7 +269,7 @@ function App() {
                   color: '#7B3F00',
                   fontWeight: 700,
                   fontSize: '0.75rem',
-                  border: '1px solid #FFD700'
+                  border: '1px solid #22D3EE'
                 }} 
               />
             </Box>
@@ -285,7 +285,7 @@ function App() {
               <IconButton 
                 sx={{ 
                   mr: 2, 
-                  color: '#FF9933',
+                  color: '#4F46E5',
                   backgroundColor: 'rgba(255, 153, 51, 0.1)',
                   '&:hover': { backgroundColor: 'rgba(255, 153, 51, 0.2)' }
                 }}
@@ -305,7 +305,7 @@ function App() {
                   fontWeight: 700,
                   px: 3,
                   py: 1,
-                  border: '2px solid #FFD700',
+                  border: '2px solid #22D3EE',
                   boxShadow: '0 4px 16px rgba(255, 215, 0, 0.3)'
                 }}
               >
@@ -322,12 +322,12 @@ function App() {
                     minWidth: 220,
                     borderRadius: 3,
                     boxShadow: '0 8px 32px rgba(0,0,0,0.12)',
-                    border: '1px solid #FFD700'
+                    border: '1px solid #22D3EE'
                   }
                 }}
               >
                 <MenuItem onClick={handleMenuClose} sx={{ fontWeight: 600, color: '#7B3F00' }}>
-                  <SettingsOutlined sx={{ mr: 2, color: '#FF9933' }} />
+                  <SettingsOutlined sx={{ mr: 2, color: '#4F46E5' }} />
                   सेटिंग्स • Settings
                 </MenuItem>
                 <MenuItem onClick={handleDisconnect} sx={{ color: '#E34234', fontWeight: 600 }}>
@@ -354,7 +354,7 @@ function App() {
               className="bharat-alert bharat-alert-success"
               sx={{ 
                 borderRadius: 0,
-                background: 'linear-gradient(135deg, #138808 0%, #50C878 100%)',
+                background: 'linear-gradient(135deg, #06B6D4 0%, #0EA5E9 100%)',
                 color: 'white',
                 fontSize: '1.1rem',
                 fontWeight: 600,
@@ -381,13 +381,13 @@ function App() {
               sx={{
                 textAlign: 'center',
                 py: 10,
-                background: 'linear-gradient(135deg, #FF6B35 0%, #F7931E 50%, #FFD700 100%)',
+                background: 'linear-gradient(135deg, #FF6B35 0%, #F7931E 50%, #22D3EE 100%)',
                 borderRadius: 5,
                 color: 'white',
                 mb: 6,
                 position: 'relative',
                 overflow: 'hidden',
-                border: '3px solid #FFD700'
+                border: '3px solid #22D3EE'
               }}
             >
               <Box sx={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, opacity: 0.1 }}>
@@ -467,7 +467,7 @@ function App() {
                   subtitle: 'Secure & Transparent',
                   description: 'अपरिवर्तनीय सत्यापन के साथ ब्लॉकचेन-आधारित दस्तावेज़ भंडारण',
                   englishDesc: 'Blockchain-based document storage with immutable verification',
-                  gradient: 'linear-gradient(135deg, #138808 0%, #50C878 100%)'
+                  gradient: 'linear-gradient(135deg, #06B6D4 0%, #0EA5E9 100%)'
                 },
                 {
                   icon: '⚡',
@@ -584,8 +584,8 @@ function App() {
           mt: 'auto',
           py: 4,
           px: 2,
-          background: 'linear-gradient(135deg, #FF9933 0%, #FFFFFF 50%, #138808 100%)',
-          borderTop: '4px solid #FFD700',
+          background: 'linear-gradient(135deg, #4F46E5 0%, #FFFFFF 50%, #06B6D4 100%)',
+          borderTop: '4px solid #22D3EE',
           position: 'relative'
         }}
       >
@@ -638,7 +638,7 @@ function App() {
                       backgroundColor: 'rgba(255, 215, 0, 0.3)',
                       color: '#7B3F00',
                       fontWeight: 700,
-                      border: '1px solid #FFD700'
+                      border: '1px solid #22D3EE'
                     }}
                   />
                 ))}
